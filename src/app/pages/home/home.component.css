@@ -1,0 +1,36 @@
+.homeBg {
+  width: 100%;
+}
+.homeContainer {
+  max-width: 1200px;
+  margin: auto;
+  margin-top: 50px;
+}
+.buyButton {
+  width: 100%;
+}
+.cardClick,
+.cardClick:hover,
+.cardClick:focus,
+.cardClick:active {
+  text-decoration: none;
+  color: inherit;
+}
+.homeContainer {
+  display: grid;
+  grid-template: auto/auto auto auto;
+  gap: 3vw;
+}
+.productImageContainer {
+  width: 100%;
+  height: 250px;
+  display: grid;
+  place-items: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.imgAlt {
+  color: transparent;
+  margin: 10px;
+}

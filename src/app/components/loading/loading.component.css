@@ -1,0 +1,12 @@
+.loadingContainer {
+  width: 100%;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+.text {
+  color: #19345e;
+}
+.dots {
+  color: #f47522;
+}

@@ -1,0 +1,81 @@
+.detailBg {
+  width: 100%;
+}
+.detailContainer {
+  max-width: 1200px;
+  margin: auto;
+  margin-top: 100px;
+}
+.detailContainer {
+  padding-top: 30px;
+}
+.heroBanner {
+  width: 100%;
+  height: 45vh;
+  color: transparent;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.info {
+  padding: 5vw;
+}
+.title,
+.description,
+.price {
+  margin-bottom: 2vw;
+}
+.buyTotal {
+  width: 40px;
+  margin-top: 10px;
+}
+.priceTotal {
+  margin-top: 20px;
+}
+.buyContainer {
+  width: 150px;
+}
+.buyButton {
+  background-color: #f47522;
+  color: white;
+  width: 150px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  border-radius: 5px;
+}
+.buyButton:hover {
+  background-color: white;
+  border: 1px solid #19345e;
+  color: #19345e;
+}
+.detailContainer a,
+.detailContainer a:hover,
+.detailContainer a:focus,
+.detailContainer a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+input[type="number"]::-webkit-inner-spin-button {
+  opacity: 1;
+}
+
+@media screen and (min-width: 768px) {
+  .detailContainer {
+    display: flex;
+    gap: 30px;
+  }
+  .detailContainer h2 {
+    width: 38%;
+  }
+  .info {
+    width: 58%;
+    padding: 20px;
+  }
+  .title,
+  .description,
+  .price {
+    margin-bottom: 20px;
+  }
+}

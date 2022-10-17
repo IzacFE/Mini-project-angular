@@ -1,0 +1,9 @@
+{
+  "signupUsers": [
+    {
+      "email": "test@gmail.com",
+      "password": "123456",
+      "id": 2
+    }
+  ]
+}

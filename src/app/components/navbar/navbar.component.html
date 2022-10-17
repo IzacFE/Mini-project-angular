@@ -1,0 +1,27 @@
+<nav>
+  <div class="navContainer">
+    <input type="checkbox" id="check" />
+    <label for="check" class="checkbtn">
+      <i class="pi pi-bars"></i>
+    </label>
+
+    <a routerLink="/" class="logo">
+      <i class="pi pi-shopping-bag"></i><span class="logoText">SerbaStore</span>
+    </a>
+
+    <ul class="ulNavbar">
+      <li class="navListEffek">
+        <a routerLink="/" class="navbar-brand"><i class="pi pi-home"></i></a>
+      </li>
+      <!-- <li class="navListEffek">
+        <a routerLink="/cart"><i class="pi pi-shopping-cart"></i></a>
+      </li>
+      <li class="navListEffek">
+        <a routerLink="/profile"><i class="pi pi-user"></i></a>
+      </li> -->
+      <li class="navListEffek" (click)="logOut()">
+        <a routerLink="/auth/login"><i class="pi pi-sign-out"></i></a>
+      </li>
+    </ul>
+  </div>
+</nav>

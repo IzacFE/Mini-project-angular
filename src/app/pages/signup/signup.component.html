@@ -1,0 +1,25 @@
+<div class="signUpPage">
+  <div class="signUpCard">
+    <h1 class="title">Silahkan Buat Akun Anda</h1>
+    <h3 class="description">Masukkan Email dan Password</h3>
+    <form [formGroup]="signupForm" (ngSubmit)="signUp()">
+      <div class="email">
+        <label for="email">Alamat Email</label>
+        <input formControlName="email" type="email" name="email" id="idEmail" />
+      </div>
+      <div class="password">
+        <label for="password">Password Akun</label>
+        <input
+          formControlName="password"
+          type="password"
+          name="password"
+          id="idPassword"
+        />
+      </div>
+      <button type="submit" class="signUpButton">Buat Akun</button>
+      <div class="linkContainer">
+        <a routerLink="/auth/login">Kembali ke Halaman Masuk</a>
+      </div>
+    </form>
+  </div>
+</div>

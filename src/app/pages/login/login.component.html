@@ -1,0 +1,27 @@
+<div class="loginPage">
+  <div class="loginCard">
+    <h1 class="title">Silahkan Masuk Terlebih Dahulu</h1>
+    <h3 class="description">Masukkan Email dan Password</h3>
+    <form [formGroup]="loginForm" (ngSubmit)="login()">
+      <div class="email">
+        <div class="label">
+          <label for="email">Alamat Email</label>
+        </div>
+        <input formControlName="email" type="email" name="email" id="idEmail" />
+      </div>
+      <div class="password">
+        <div class="label"><label for="password">Password Akun</label></div>
+        <input
+          formControlName="password"
+          type="password"
+          name="password"
+          id="idPassword"
+        />
+      </div>
+      <button type="submit" class="loginButton">Masuk</button>
+      <div class="linkContainer">
+        <a routerLink="/auth/signup">Belum Punya Akun? Buat akun disini</a>
+      </div>
+    </form>
+  </div>
+</div>

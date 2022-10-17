@@ -1,0 +1,70 @@
+.signUpPage {
+  width: 100%;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+.signUpCard {
+  max-width: 500px;
+  border: 3px solid #19345e;
+  border-radius: 10px;
+  padding: 10px;
+  width: 100%;
+  min-height: 50vh;
+  box-shadow: 2px 2px 5px gray;
+}
+.title {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 24px;
+}
+.description {
+  text-align: center;
+}
+.signUpButton {
+  background-color: #f47522;
+  color: white;
+  width: 150px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  border: none;
+  border-radius: 5px;
+}
+.signUpButton:hover {
+  cursor: pointer;
+  background-color: white;
+  border: 1px solid #19345e;
+  color: #19345e;
+}
+.email,
+.password {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.email input,
+.password input {
+  width: 100%;
+  height: 30px;
+}
+.label {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+button {
+  margin: auto;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+.signUpCard a,
+.signUpCard a:hover,
+.signUpCard a:focus,
+.signUpCard a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+.linkContainer {
+  text-align: center;
+  margin-bottom: 30px;
+}

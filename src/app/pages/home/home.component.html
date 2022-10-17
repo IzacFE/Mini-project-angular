@@ -1,0 +1,59 @@
+<div *ngIf="loading">
+  <app-loading></app-loading>
+</div>
+
+<div class="homeBg">
+  <div class="homeContainer">
+    <div *ngIf="!loading && errorMessage">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <p>{{ errorMessage }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="homeContainer" *ngIf="!loading && products.length > 0">
+    <div *ngFor="let product of products">
+      <a
+        routerLink="detail/{{ product.id }}"
+        routerLinkActive="router-link-active"
+        class="cardClick"
+      >
+        <p-card
+          header="{{ product.title }}"
+          subheader="Harga : Rp. {{ product.price * 1000 }}"
+          [style]="{ width: '360px' }"
+          styleClass="p-card-shadow"
+        >
+          <ng-template pTemplate="header">
+            <h3 class="imgAlt">
+              <div
+                class="productImageContainer"
+                style="background-image: url('{{ product.image }}');"
+              >
+                <div *ngIf="product.title.length <= 15">
+                  {{ product.title }}
+                </div>
+                <div *ngIf="product.title.length > 15">
+                  {{ product.title.slice(0, 12) } }...
+                </div>
+              </div>
+            </h3>
+          </ng-template>
+          <p *ngIf="product.description.length < 20">
+            {{ product.description }}
+          </p>
+          <p *ngIf="product.description.length > 20">
+            {{ product.description.slice(0, 100) }}...
+          </p>
+          <!-- <ng-template pTemplate="footer">
+        <p-button class="buyButton" label="Beli" icon="pi pi-check"></p-button>
+      </ng-template> -->
+        </p-card>
+      </a>
+    </div>
+  </div>
+</div>

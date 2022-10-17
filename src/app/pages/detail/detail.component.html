@@ -1,0 +1,71 @@
+<div *ngIf="loading">
+  <app-loading></app-loading>
+</div>
+
+<div *ngIf="!loading && errorMessage">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <p>{{ errorMessage }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="detailBg" *ngIf="!loading && isNotEmpty()">
+  <div class="detailContainer">
+    <h2>
+      <div
+        class="heroBanner"
+        style="background-image: url('{{ product.image }}');"
+      >
+        {{ product.title }}
+      </div>
+    </h2>
+    <div class="info">
+      <h1 class="title">
+        {{ product.title }}
+      </h1>
+      <div class="description">
+        <p>{{ product.description }}</p>
+      </div>
+      <div class="price">
+        <p>Harga : Rp. {{ price }}</p>
+      </div>
+      <div class="buttonContainer">
+        <form>
+          <div>
+            <label for="total">Jumlah Beli</label>
+            <br />
+            <input
+              class="buyTotal"
+              name="total"
+              type="number"
+              min="0"
+              value="0"
+              (change)="updateTotal($event)"
+            />
+            <p class="priceTotal">
+              Total Harga : <br />
+              Rp. {{ total * price }}
+            </p>
+          </div>
+          <br />
+          <div class="buyContainer">
+            <a
+              href="https://wa.me/6282135210939/?text=Haloo%20SerbaStore%0ASaya%20ingin%20membeli%20Produk%20{{
+                product.title
+              }}%20dengan%20ID%20barang:%20{{ productId }}%20sebanyak:%20{{
+                total
+              }}%0Atotal%20harga%20barang%20yang%20saya%20beli%20adalah:%20Rp.%20{{
+                price * total
+              }}"
+              target="_blank"
+              ><div class="buyButton">Beli</div></a
+            >
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
